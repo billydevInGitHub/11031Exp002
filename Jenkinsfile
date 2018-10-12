@@ -13,9 +13,7 @@ pipeline {
 
         stage ('Build') {
  				steps {
-               maven(maven : 'MAVEN354'){
-                        bat "mvn clean compile"
-                }
+               bat "mvn clean compile" 
             }
             post {
                 success {
