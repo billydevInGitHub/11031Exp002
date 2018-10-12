@@ -13,14 +13,7 @@ pipeline {
 
         stage ('Build') {
  				steps {
-               maven(maven : 'MAVEN354'){
-                        bat "mvn clean compile"
-                }
-            }
-            post {
-                success {
-                    junit 'target/surefire-reports/**/*.xml' 
-                }
+               bat "mvn clean compile" 
             }
         }
     }
