@@ -12,8 +12,9 @@ pipeline {
         }
 
         stage ('Build') {
- 				steps {
-               bat "mvn install" 
+ 				     steps {
+               bat "mvn jar:jar install:install "
+               bat "java -jar target/my-app-1.0-SNAPSHOT.jar"               
             }
         }
     }

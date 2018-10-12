@@ -13,7 +13,9 @@ pipeline {
 
         stage ('Build') {
  				steps {
-               bat "mvn clean compile" 
+               bat "mvn jar:jar install:install "
+               bat "java -jar target/my-app-1.0-SNAPSHOT.jar"
+               
             }
         }
     }
