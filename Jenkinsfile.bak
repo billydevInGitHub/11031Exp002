@@ -8,7 +8,6 @@ pipeline {
         stage ('Initialize') {
             steps {
                     echo %path%
-                    echo %M2_HOME%
             }
         }
 
